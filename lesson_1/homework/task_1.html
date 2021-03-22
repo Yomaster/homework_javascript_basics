@@ -15,6 +15,20 @@
         температура по Цельсию
     </div>
     <script type="text/javascript">
+
+        function degrees_Conversion(c) {
+            let f = (9 / 5) * c + 32;
+            return f;
+        }
+
+        let c = +prompt('Введите значение температуры в градусах по Цельсию:');
+
+        if (c) {
+            alert(`Температура по Цельсию равна: ${degrees_Conversion(c)}`);
+        } else {
+            alert('Введите число');
+        }
+
     </script>
 </body>
 
