@@ -16,6 +16,20 @@
     </div>
     <script type="text/javascript">
 
+        let productId;
+        let productName;
+        let productPrice;
+        let productNumber;
+        let basket = { productId: [productName, productPrice, productNumber] };
+
+        function countBasketPrice(bs) {
+            let result = 0;
+            for (let i in bs) {
+                result += bs[i][1] * bs[i][2];
+            }
+            return result;
+        }
+
     </script>
 </body>
 
