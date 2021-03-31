@@ -14,6 +14,30 @@
     </div>
     <script type="text/javascript">
 
+        let arr = [2];
+
+        outerLoop:
+        for (let i = 3; i <= 100; i++) {
+            if (i % 2 === 0) {
+                continue;
+            }
+            else if (i > 10 && i % 10 === 5) {
+                continue;
+            }
+            for (let k of arr) {
+                if (k * k - 1 > i) {
+                    arr.push(i);
+                    continue outerLoop;
+                }
+                if (i % k === 0) {
+                    continue outerLoop;
+                }
+            }
+            arr.push(i);
+        }
+
+        console.log(arr);
+
     </script>
 </body>
 
