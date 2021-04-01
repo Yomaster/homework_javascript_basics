@@ -17,6 +17,30 @@
     </div>
     <script type="text/javascript">
 
+        function countingNumbers(num) {
+            let strNum = String(num);
+            if (strNum.length > 3 || !Number.isInteger(num)) {
+                console.log('Необходимо ввести трехзначное число, либо меньшее');
+                return {};
+            }
+            numCount = {
+                'units': +strNum[strNum.length - 1] || 0,
+                'tens': +strNum[strNum.length - 2] || 0,
+                'hundreds': +strNum[strNum.length - 3] || 0
+            };
+            return numCount;
+        }
+
+        function numberRequest() {
+            return +prompt('Введите число:')
+        }
+
+        function resultOutput() {
+            console.log(countingNumbers(numberRequest()));
+        }
+
+        resultOutput();
+
     </script>
 </body>
 
